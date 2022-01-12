@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Light e-mail</title>
+    <link rel="shortcut icon" href="imagens/petlight_ico_a.png" type="image/x-icon">
+   
+    <style>
+        @font-face {
+            font-family: 'Buenard Regular';
+            src: url(../fontes/buenard/Buenard-Regular.ttf) format('truetype');
+            font-weight: normal;
+        }
+        
+        @font-face {
+            font-family: 'Buenard Bold';
+            src: url(../fontes/buenard/Buenard-Bold.ttf) format('truetype');
+            font-weight: normal;
+        }
+        
+         :root {
+            --cor0: #fff;
+            --cor1: rgb(183, 183, 250);
+            --cor2: lightblue;
+            --cor3: blue;
+            --cor4: rgb(2, 2, 85);
+            --cor5: rgb(148, 148, 255);
+            --fonte-principal: 'Buenard Regular', cursive;
+            --fonte-secundaria: 'Buenard Bold', cursive;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: lightblue url(/imagens/petlightcb_pq_1a.jpg) no-repeat fixed center center;
+        }
+        
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.692);
+            padding: 15px;
+            border-radius: 15px;
+            width: 50%;
+            color: var(--cor1);
+        }
+        
+        fieldset {
+            border: 2px solid var(--cor5);
+        }
+        
+        legend {
+            border: 1px solid var(--cor1);
+            padding: 5px;
+            text-align: center;
+            background-color: var(--cor1);
+            border-radius: 5px;
+            color: var(--cor4);
+        }
+        
+        .inputBox {
+            position: relative;
+        }
+        
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--cor2);
+            outline: none;
+            color: var(--cor2);
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 15px;
+        }
+        
+        #submit {
+            background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+            width: 40%;
+            border: none;
+            padding: 15px;
+            color: white;
+            cursor: pointer;
+            margin-right: 5px;
+            color: var(--cor4);
+            font-weight: 600;
+        }
+        
+        #submit:hover {
+            background-image: linear-gradient(to right, var(--cor1), var(--cor4), var(--cor2));
+            color: white;
+        }
+        
+        #reset {
+            background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+            width: 40%;
+            border: none;
+            padding: 15px;
+            color: var(--cor4);
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        
+        #reset:hover {
+            background-image: linear-gradient(to right, var(--cor1), var(--cor4), var(--cor2));
+            color: white;
+        }
+        
+        div.mensagem {
+            margin: auto;
+        }
+        
+        textarea.mensagemint {
+            width: 100%;
+            height: 100px;
+            background-color: var(--cor5);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        label.msg {
+            margin-bottom: 10px;
+        }
+        
+        .envialimpa {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .paragrafo {
+            font-size: 13px;
+            margin: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="mailto:petland@yahoo.com" method="POST" enctype="text/plain">
+            <fieldset>
+                <legend><b>Solicitar Cota&ccedil;&atilde;o</b></legend>
+                <br>
+                <input type="hidden" name="Assunto" id="Assunto" value="Contato PetLight via e-mail">
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome*</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Número de Telefone*</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">E-mail*</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser">
+                    <label for="cidade" class="labelInput">Cidade</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser">
+                    <label for="estado" class="labelInput">Estado</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser">
+                    <label for="endereco" class="labelInput">Endereço</label>
+                </div>
+                <br>
+                <div class="mensagem">
+                    <label class="msg" for="mensagem">Mensagem*</label>
+                    <br>
+                    <textarea class="mensagemint" name="mensagem" id="mensagem" required placeholder="Gostaria de solicitar uma cotação sobre ..."></textarea>
+                </div>
+                <br>
+                <p class="paragrafo">* Preenchimento obrigatório</p>
+                <br>
+                <div class="envialimpa">
+                    <input type="submit" id="submit" value="Enviar" onclick="obrigado()">
+                    <input type="reset" name="reset" id="reset" value="Limpar">
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+    <script>
+        function obrigado() {
+            let name = document.querySelector("#nome").value;
+            let tel = document.querySelector("#telefone").value;
+            let email = document.querySelector("#email").value;
+            let msg = document.querySelector("#mensagem").value
+
+            if (name == "" || tel == "" || email == "" || msg == "") {
+                alert('Nome, Telefone, E-mail e Mensagem são obrigatórios !!!')
+            } else {
+                let url = `http://127.0.0.1:5501/obrigado.html `;
+
+                window.open(url)
+            }
+        }
+    </script>
+</body>
+
+</html>
