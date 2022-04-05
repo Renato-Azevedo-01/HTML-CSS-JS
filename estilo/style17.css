@@ -128,13 +128,10 @@ nav ul li:hover>ul {
     z-index: 20;
 }
 
-nav ul ul li {
-    position: relative;
-    left: 0px;
-    margin: 0px;
-    width: 135px;
-    float: none;
-    display: list-item;
+
+nav ul li ul li {
+    margin-bottom: 0px;
+    
 }
 
 .fa-plus {
