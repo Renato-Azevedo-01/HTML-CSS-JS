@@ -115,6 +115,15 @@ nav ul ul li a:hover {
     border-radius: 0px;
 }
 
+nav ul ul li {
+    position: relative;
+    left: 0px;
+    margin: 0px;
+    width: 135px;
+    float: none;
+    display: list-item;
+}
+
 nav ul ul {
     position: absolute;
     top: 44px;
@@ -130,7 +139,7 @@ nav ul li:hover>ul {
 
 
 nav ul li ul li {
-    margin-bottom: 0px;
+    margin-bottom: 1px;
     
 }
 
@@ -245,11 +254,10 @@ ul li  a {
     color:red;
     font-size: 20px;
     text-decoration:none;
-   
-   
-    
-    
 }
+
+
+
 div ul li a img{
     margin-right:20px;
    
