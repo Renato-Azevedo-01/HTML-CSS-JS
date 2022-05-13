@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Light e-mail</title>
+    <title>Pet Light WhatsApp</title>
     <link rel="shortcut icon" href="imagens/petlight_ico_a.png" type="image/x-icon">
-   
+
     <style>
         @font-face {
             font-family: 'Buenard Regular';
@@ -33,8 +33,16 @@
         }
         
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: var(--fonte-principal);
             background: lightblue url(/imagens/petlightcb_pq_1a.jpg) no-repeat fixed center center;
+            ;
+        }
+        
+        img.logo {
+            width: 12%;
+            max-width: 120px;
+            padding-left: 0.2%;
+            opacity: 1;
         }
         
         .box {
@@ -42,24 +50,30 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.692);
-            padding: 15px;
+            background-color: rgb(0, 0, 0, 0.7);
             border-radius: 15px;
-            width: 50%;
+            width: 60%;
             color: var(--cor1);
+            padding-bottom: 10px;
         }
         
         fieldset {
-            border: 2px solid var(--cor5);
+            border: 2px solid var(--cor1);
+            padding: 1px 2px 7px 2px;
+            width: 90%;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
         
         legend {
             border: 1px solid var(--cor1);
             padding: 5px;
             text-align: center;
-            background-color: var(--cor1);
+            background-color: var(--cor5);
             border-radius: 5px;
-            color: var(--cor4);
+            color: var(--cor3)
         }
         
         .inputBox {
@@ -75,6 +89,7 @@
             font-size: 15px;
             width: 100%;
             letter-spacing: 1px;
+            font-family: var(--fonte-principal);
         }
         
         .labelInput {
@@ -83,6 +98,7 @@
             left: 0px;
             pointer-events: none;
             transition: 0.5s;
+            color: var(--cor5);
         }
         
         .inputUser:focus~.labelInput,
@@ -91,21 +107,43 @@
             font-size: 15px;
         }
         
+        #mensagem {
+            font-size: 16px;
+            border: none;
+            padding: 8px;
+            font-family: var(--fonte-principal);
+            color: var(--cor4);
+        }
+        
+        textarea.caixa {
+            display: flexbox;
+            width: 90%;
+            align-items: center;
+            justify-content: space-around;
+            height: 100px;
+            background-color: var(--cor5);
+            border-radius: 10px;
+        }
+        
+        #area {
+            display: flexbox;
+            text-align: center;
+            justify-content: center;
+            margin: auto
+        }
+        
         #submit {
             background-image: linear-gradient(to right, var(--cor1), var(--cor4));
             width: 40%;
             border: none;
             padding: 15px;
-            color: white;
+            color: var(--cor0);
             cursor: pointer;
-            margin-right: 5px;
-            color: var(--cor4);
-            font-weight: 600;
+            margin-right: 10px;
         }
         
         #submit:hover {
             background-image: linear-gradient(to right, var(--cor1), var(--cor4), var(--cor2));
-            color: white;
         }
         
         #reset {
@@ -113,52 +151,40 @@
             width: 40%;
             border: none;
             padding: 15px;
-            color: var(--cor4);
-            font-weight: 600;
+            color: var(--cor0);
             cursor: pointer;
-            margin-left: 5px;
+            margin-left: 10px;
         }
         
         #reset:hover {
             background-image: linear-gradient(to right, var(--cor1), var(--cor4), var(--cor2));
-            color: white;
         }
         
-        div.mensagem {
-            margin: auto;
-        }
-        
-        textarea.mensagemint {
-            width: 100%;
-            height: 100px;
-            background-color: var(--cor5);
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        
-        label.msg {
-            margin-bottom: 10px;
-        }
-        
-        .envialimpa {
-            display: flex;
-            justify-content: center;
+        .centraliza {
+            padding-left: 10%;
         }
         
         .paragrafo {
-            font-size: 13px;
-            margin: 1px;
+            margin: 1px 1px 8px 1px;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .alinhaesquerda {
+            display: flex;
+            text-align: left;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 
 <body>
+
     <div class="box">
-        <form action="mailto:petlight@yahoo.com" method="POST" enctype="text/plain">
+        <form action="">
             <fieldset>
-                <legend><b>Solicitar Cota&ccedil;&atilde;o</b></legend>
+                <legend><b>Solicitar Cotação</b></legend>
                 <br>
-                <input type="hidden" name="Assunto" id="Assunto" value="Contato PetLight via e-mail">
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome*</label>
@@ -172,7 +198,9 @@
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput">E-mail*</label>
+
                 </div>
+
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser">
@@ -188,39 +216,41 @@
                     <input type="text" name="endereco" id="endereco" class="inputUser">
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
-                <br>
-                <div class="mensagem">
-                    <label class="msg" for="mensagem">Mensagem*</label>
-                    <br>
-                    <textarea class="mensagemint" name="mensagem" id="mensagem" required placeholder="Gostaria de solicitar uma cotação sobre ..."></textarea>
+
+                <div id="area">
+                    <label class="alinhaesquerda " for="mensagem">Mensagem*</label>
+
+                    <textarea class="caixa" name="mensagem" id="mensagem" placeholder="Gostaria de saber sobre a disponibilidade e os preços. Preciso de ajuda com o seguinte: " required></textarea>
                 </div>
-                <br>
-                <p class="paragrafo">* Preenchimento obrigatório</p>
-                <br>
-                <div class="envialimpa">
-                    <input type="submit" id="submit" value="Enviar" onclick="obrigado()">
+
+                <p class='paragrafo'>* Campos obrigatórios .</p>
+                <div class="centraliza">
+                    <input type="submit" name="submit" id="submit">
                     <input type="reset" name="reset" id="reset" value="Limpar">
                 </div>
-
             </fieldset>
         </form>
-
     </div>
     <script>
-        function obrigado() {
-            let name = document.querySelector("#nome").value;
-            let tel = document.querySelector("#telefone").value;
+        document.querySelector("#submit").addEventListener('click', function() {
+            let assunto = 'Solicitação de Cotação'
+            let nome = document.querySelector("#nome").value;
+            let telefone = document.querySelector("#telefone").value;
             let email = document.querySelector("#email").value;
-            let msg = document.querySelector("#mensagem").value
+            let cidade = document.querySelector("#cidade").value;
+            let estado = document.querySelector("#estado").value;
+            let endereco = document.querySelector("#endereco").value;
+            let mensagem = document.querySelector("#mensagem").value;
 
-            if (name == "" || tel == "" || email == "" || msg == "") {
-                alert('Nome, Telefone, E-mail e Mensagem são obrigatórios !!!')
+            if (nome == "" || telefone == "" || email == "" || mensagem == "") {
+                alert("Os campos Nome, Telefone,  E-mail e Mensagem devem ser preenchidos")
             } else {
-                let url = `https://www.petlightcb.com.br/obrigado.html `;
+
+                let url = `https://wa.me/5511971572234/?text=Assunto:%20 + ${assunto} + %0ANome:%20 + ${nome} + %0ATelefone:%20+ ${telefone}  + %0AEmail:%20+ ${email}  +  %0ACidade:%20+ ${cidade} + %0AEstado:%20+ ${estado} + %0AEndereço:%20+ ${endereco} + %0AMensagem:%20+ ${mensagem} `;
 
                 window.open(url)
             }
-        }
+        });
     </script>
 </body>
 
