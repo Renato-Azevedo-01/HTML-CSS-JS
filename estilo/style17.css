@@ -133,6 +133,7 @@ nav ul ul li {
     position: relative;
     left: 0px;
     margin: 0px;
+    padding:0;
     width: 135px;
     float: none;
     display: list-item;

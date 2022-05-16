@@ -57,6 +57,7 @@ body {
     padding-left: 16px;
     
 }
+
 #contato2 a {
     color: white;
     text-decoration: none;
@@ -132,15 +133,17 @@ nav ul ul li {
     position: relative;
     left: 0px;
     margin: 0px;
+    padding:0;
     width: 135px;
     float: none;
     display: list-item;
+    
 }
 
-.fa-plus {
+/*.fa-plus {
     margin-left: 40px;
     font-size: 15px;
-}
+} */
 
 .show,
 .icon,
@@ -231,7 +234,7 @@ img.borda2 {
     columns: 2;
     list-style-position: inside;
     list-style-type: '\00A0\00a0'; /* site EMOJIPEDIA */
-    padding: 20px 0px 10px 30px  ;
+    padding: 0px 0px 10px 30px  ;
     font-size: 18px;
     
 }
@@ -247,12 +250,10 @@ ul li{
 ul li  a {
     color:red;
     font-size: 20px;
-    text-decoration:none;
-   
-   
-    
-    
+    text-decoration:none;    
 }
+
+
 div ul li a img{
     margin-right:20px;
    
