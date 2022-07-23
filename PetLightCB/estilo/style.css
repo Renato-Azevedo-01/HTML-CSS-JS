@@ -935,7 +935,7 @@ div.politicaprivacidade a:hover{
         justify-content: center;
         text-align: center;
         align-content: center;
-        padding: 0px;
+        padding-bottom: 62px;
         margin: auto;
         height: 55px;
         max-width: 900px;
@@ -949,7 +949,7 @@ div.politicaprivacidade a:hover{
 
     #contato1 {
         color: white;
-        font-size: 12px;
+        font-size: 18px;
         display: block;
         justify-content: center;
         text-align: center;
@@ -963,7 +963,7 @@ div.politicaprivacidade a:hover{
 
     #contato2 {
         color: white;
-        font-size: 14px;
+        font-size: 20px;
         justify-content: center;
         text-align: center;
         min-width: 210px;
