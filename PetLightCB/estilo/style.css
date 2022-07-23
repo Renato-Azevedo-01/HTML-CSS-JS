@@ -95,37 +95,7 @@ body {
     padding-right: 130px;
 }
 
-.parag_1 {
-    font-size: 35px;
-    text-align: center;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-    width: 500px;
-    z-index: 3;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.192);
-    padding: 10px;
-    text-indent: 20px;
-    border-radius: 10px;
-    margin-left: -50px;
-}
 
-.parag_2 {
-    font-size: 35px;
-    text-align: center;
-    position: absolute;
-    top: 350px;
-    left: -50px;
-    width: 700px;
-    z-index: 3;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.192);
-    padding: 10px;
-    text-indent: 20px;
-    border-radius: 10px;
-    margin-left: 180px;
-}
 
 .imagem_principal {
     display: flex;
@@ -139,22 +109,6 @@ body {
     margin-bottom: 10px;
     margin-top: 5px;
     border: solid 1px red;
-}
-
-.parag_1 {
-    font-size: 15px;
-    text-align: center;
-    position: absolute;
-    top: 575px;
-    left: 200px;
-    width: 300px;
-    z-index: 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.192);
-    padding: 10px;
-   
-    border-radius: 10px;
-    margin-left: -50px;
 }
 
 
@@ -274,7 +228,7 @@ input {
 .borda1 {
     border: solid 1px red;
     border-radius: 0px 10%;
-    max-width: 470px;
+    width: 70%;
 }
 
 .borda3 {
@@ -930,16 +884,15 @@ div.politicaprivacidade a:hover{
     #super_contato_geral {
         background-color: red;
         color: white;
-        font: arial;
-        display: block;
+        font: cursive;
+        display: flex;
         justify-content: center;
+        vertical-align: auto;
         text-align: center;
         align-content: center;
         padding-bottom: 62px;
-        margin: auto;
-        height: 155px;
-        max-width: 900px;
-        min-width: 360px;
+        height: 14vh;
+        width:100%;
         margin-bottom: 10px;
     }
     #contato_geral {       
@@ -949,12 +902,17 @@ div.politicaprivacidade a:hover{
 
     #contato1 {
         color: white;
-        font-size: 38px;
+        font-size: 17px;
         display: block;
         justify-content: center;
         text-align: center;
         min-width: 260px;
         padding-top:7px;
+    }
+    #contato1 a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
     }
 
     span.divisor{
@@ -962,8 +920,8 @@ div.politicaprivacidade a:hover{
     }
 
     #contato2 {
-        color: white;
-        font-size: 40px;
+        display: block;
+        color: white;        
         justify-content: center;
         text-align: center;
         min-width: 210px;
@@ -973,6 +931,7 @@ div.politicaprivacidade a:hover{
     #contato2 a {
         color: white;
         text-decoration: none;
+        font-size: 22px;
     }
     
     #div_email img {
@@ -1044,22 +1003,7 @@ div.politicaprivacidade a:hover{
         margin-top: 5px;
         border: solid 1px red;
     }
-        
-    .parag_1 {
-        font-size: 12px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: absolute;
-        top: 360px;
-        left: 85px;
-        width: auto;
-        z-index: 3;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.192);
-        border-radius: 10px;
-        
-    }
+      
         
     .yoda3 {
         display: flex;
@@ -1136,11 +1080,11 @@ div.politicaprivacidade a:hover{
     }
     .icon {
         display: block;
-        color: red;
+        color: white;
         position: absolute;
         left: 5px;
         margin-top: -165px;
-        font-size: 18px;
+        font-size: 25px;
         cursor: pointer;
         z-index: 1000;
     }
