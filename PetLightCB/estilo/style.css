@@ -931,13 +931,13 @@ div.politicaprivacidade a:hover{
         background-color: red;
         color: white;
         font: arial;
-        display: flex;
+        display: block;
         justify-content: center;
         text-align: center;
         align-content: center;
         padding-bottom: 62px;
         margin: auto;
-        height: 55px;
+        height: 155px;
         max-width: 900px;
         min-width: 360px;
         margin-bottom: 10px;
@@ -949,7 +949,7 @@ div.politicaprivacidade a:hover{
 
     #contato1 {
         color: white;
-        font-size: 18px;
+        font-size: 38px;
         display: block;
         justify-content: center;
         text-align: center;
@@ -963,7 +963,7 @@ div.politicaprivacidade a:hover{
 
     #contato2 {
         color: white;
-        font-size: 20px;
+        font-size: 40px;
         justify-content: center;
         text-align: center;
         min-width: 210px;
