@@ -239,7 +239,7 @@ input {
 .borda3 {
     border: solid 1px red;
     border-radius: 0px 10%;
-    max-width: 500px;
+    max-width: 50%;
 }
 
 .atendimento {
