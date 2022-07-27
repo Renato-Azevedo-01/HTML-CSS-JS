@@ -228,7 +228,12 @@ input {
 .borda1 {
     border: solid 1px red;
     border-radius: 0px 10%;
-    width: 70%;
+    width: 40%;
+}
+.borda2 {
+    border: solid 1px red;
+    border-radius: 0px 10%;
+    width: 60%;
 }
 
 .borda3 {
@@ -891,7 +896,7 @@ div.politicaprivacidade a:hover{
         text-align: center;
         align-content: center;
         padding-bottom: 62px;
-        height: 14vh;
+        height: 55px;
         width:100%;
         margin-bottom: 10px;
     }
@@ -1080,7 +1085,7 @@ div.politicaprivacidade a:hover{
     }
     .icon {
         display: block;
-        color: white;
+        color: blue;
         position: absolute;
         left: 5px;
         margin-top: -165px;
@@ -1089,7 +1094,7 @@ div.politicaprivacidade a:hover{
         z-index: 1000;
     }
     .icon:hover {
-        color: blue;
+        color: red;
         z-index: 1000;
     }
     nav ul li a:hover {
@@ -1184,8 +1189,12 @@ div.politicaprivacidade a:hover{
         padding-bottom: 5px;
         color: blue;
     }
-    .borda1 img {
-        width: 350px;
+    .borda1  {
+        width: 250px;
+        height: auto;
+    }
+    .borda2  {
+        width: 300px;
         height: auto;
     }
     
